@@ -3,7 +3,7 @@ img{
     max-height: 100%;
 }
 header{
-    background-color:rgb(57, 40, 150);
+    background-color:rgb(8, 114, 3);
     padding: .5em;
     color:#dac8c8;
     text-align: center;
@@ -12,7 +12,7 @@ header{
 body{
     min-height: 100vh;
     min-width: 400px;  
-    background: linear-gradient(darkblue, #1616da);
+    background: linear-gradient(rgb(45, 162, 10), #0b0b0a);
     display:grid;
     grid-template-rows: auto auto 1fr auto;
     margin:0%;
