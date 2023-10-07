@@ -28,6 +28,11 @@ header>a{
     align-self: center;
 }
 
+.busqueda{
+    width: 400px;
+    border-radius: 5px;
+}
+
 body>nav{
     position: sticky;
     top:0;
