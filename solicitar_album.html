@@ -126,14 +126,19 @@
                     </p> 
                     <p>
                         <label for="res">Resolución de impresión: </label>
-                        <select id="res" name="res">
-                          <option value="150">150 dpi</option>
-                          <option value="300">300 dpi</option>
-                          <option value="450">450 dpi</option>
-                          <option value="600">600 dpi</option>
-                          <option value="750">750 dpi</option>
-                          <option value="900">900 dpi</option>
-                        </select>
+                        <input type="range" id="res" name="res" min="150" max="900" step="150" value="150" onchange="document.getElementById('outres').value=value" list="tickmarks">
+                        <output id="outres" name="outres" for="res">150</output>
+
+                        <datalist id = "tickmarks">
+                            <option value="150"></option>
+                            <option value="300"></option>
+                            <option value="450"></option>
+                            <option value="600"></option>
+                            <option value="750"></option>
+                            <option value="900"></option>
+                        </datalist>
+
+
                     </p>
                       
                     <p>
