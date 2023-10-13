@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="./imagenes/sunegamilogo.png">
+    <link rel="stylesheet" href="estilo.css">
+
     <title>Impresón de álbum-SUNEGAMI</title>
     <style>
         table, tr, th, td {
@@ -14,7 +16,17 @@
 <body>
     <header>
         <a href="index.html"><img src="./imagenes/sunegamilogo.png" alt="logo"></a>
-        <h1> Impresón de álbum - SUNEGAMI</h1>        
+        <h1> Impresón de álbum - SUNEGAMI</h1>  
+        <form>
+            <input type="search" class="busqueda">
+             <input type="submit" value="Buscar">
+        </form>
+        <aside>
+            <ul>
+                <li><a href="login.html" class="icon-login"><span>Login</span></a></li>
+                <li><a href="registro.html" class="icon-doc-new"><span>Registro</span></a></li>
+            </ul>   
+        </aside>       
     </header>
     <nav id="menu">
             <!-- <label for="chkMenu">&equiv;</label>
@@ -27,11 +39,11 @@
             </ul>
         </nav>
     <main>
-        <section id="seccion">
+        <section id="intro">
             <h2> Solicitud de impresión de álbum </h2>
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus perferendis atque ipsum provident dolorem! Eius enim unde ea veniam eum nihil commodi quod itaque quaerat ipsum! Debitis quibusdam enim aliquid.</p>
         </section>
-        <section>
+        <section id="tarifas">
             <h2>Tarifas</h2>
             <table>
                 <caption>Tarifas</caption>
