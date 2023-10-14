@@ -6,6 +6,7 @@
     <link rel="icon" href="./imagenes/sunegamilogo.png">
     <link rel="stylesheet" href="estilo.css">
     <link rel="stylesheet" href ="fontello/css/fontello.css">
+    <script src="scroll.js"></script>
     <title>Página Inicio-SUNEGAMI</title>
 </head>
 <body>
@@ -17,8 +18,8 @@
             <input type="search" class="busqueda">
              <input type="submit" value="Buscar">
         </form>
-            <!-- <label for="chkMenu">&equiv;</label>
-            <input type="checkbox" id="chkMenu"> -->
+            <label for="chkMenu">&equiv;</label>
+            <input type="checkbox" id="chkMenu">
             <aside>
                 <img src="./imagenes/user1.jpg" alt="usu">
                 <h3>Usuario: Etzio</h3>
@@ -40,7 +41,11 @@
             <h3> FOTO PRINCIPAL </h3>
             <article>
                 <h4 title="Foto1">Foto1</h4>               
-                <a href="detalle.html"><img src="./imagenes/muradin.jpg" alt="imagen"></a>
+                <a href="detalle.html">
+                    <img src="./imagenes/intro.jpg" alt="imagen" class="imagenes">
+                    <img src="./imagenes/muradin.jpg" alt="imagen" class="imagenes">
+                    <img src="./imagenes/horda.jpg" alt="imagen" class="imagenes">
+                </a>
                 <footer>
                     <div>
                         <p class="icon-male">País</p>
@@ -64,7 +69,7 @@
                 </figure>
                 <figure>
                     <h4 title="Foto 3">Foto 3</h4>
-                    <a href="detalle.html"><img src="./imagenes/muradin.jpg" alt="imagen"></a>
+                    <a href="detalle.html"><img src="./imagenes/intro.jpg" alt="imagen"></a>
                     <footer>
                         <div>
                             <p class="icon-female">País</p>
@@ -74,7 +79,7 @@
                 </figure>
                 <figure>
                     <h4 title="Foto 4">Foto 4</h4>
-                    <a href="detalle.html"><img src="./imagenes/muradin.jpg" alt="imagen"></a>
+                    <a href="detalle.html"><img src="./imagenes/horda.jpg" alt="imagen"></a>
                     <footer>
                         <div>
                             <p class="icon-female">País</p>
@@ -91,7 +96,10 @@
             <time datetime ="2023-09-25"> José Ángel Mercadillo & Octavio Gregorio </time>
             <abbr title = "DAW"> Practica 4 </abbr>
         </p>
-    </footer> 
+    </footer>
+    <script>
+        scroll();
+    </script> 
 </body>
 
 </html>
