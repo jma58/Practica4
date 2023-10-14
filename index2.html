@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="./imagenes/sunegamilogo.png">
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href ="fontello/css/fontello.css">
+    <script src="scroll.js"></script>
     <title>Página Inicio-SUNEGAMI</title>
 </head>
 <body>
@@ -12,32 +15,37 @@
         <h1>Pagina Principal-SUNEGAMI</h1>
         <h2>Usuario registrado</h2>
         <form>
-            <input type="search">
+            <input type="search" class="busqueda">
              <input type="submit" value="Buscar">
         </form>
-        <nav>
-            <!-- <label for="chkMenu">&equiv;</label>
-            <input type="checkbox" id="chkMenu"> -->
-            <img src="./imagenes/user1.jpg" alt="usu">
-            <h2>Usuario: Etzio</h2>
-        </nav>
-        <aside>  
-            <ul>
-                <li><a href="index2.html" class="icon-home"><span>Inicio</span></a></li>
-                <li><a href="index.html" class="icon-home"><span>Cerrar sesión</span></a></li>
-                <li><a href="buscar.html" class="icon-search"><span>Buscar</span></a></li>
-                <li><a href="solicitar_album.html" class="icon-search"><span>Solictar álbum</span></a></li>
-                <li><a href="usuario.html" class="icon-search"><span>Mi usuario(Menú usuario registrado)</span></a></li>
-
-            </ul>   
-        </aside>
+            <label for="chkMenu">&equiv;</label>
+            <input type="checkbox" id="chkMenu">
+            <aside>
+                <img src="./imagenes/user1.jpg" alt="usu">
+                <h3>Usuario: Etzio</h3>
+            </aside>
+            
     </header>
+    <nav id="menu"> 
+        <ul>
+            <li><a href="index2.html" class="icon-home"><span>Inicio</span></a></li>
+            <li><a href="index.html" class="icon-home"><span>Cerrar sesión</span></a></li>
+            <li><a href="buscar.html" class="icon-search"><span>Buscar</span></a></li>
+            <li><a href="solicitar_album.html" class="icon-search"><span>Solictar álbum</span></a></li>
+            <li><a href="usuario.html" class="icon-search"><span>Mi usuario(Menú usuario registrado)</span></a></li>
+
+        </ul>   
+    </nav>
     <main>
         <section id="principal">
             <h3> FOTO PRINCIPAL </h3>
             <article>
                 <h4 title="Foto1">Foto1</h4>               
-                <a href="detalle.html"><img src="./imagenes/muradin.jpg" alt="imagen"></a>
+                <a href="detalle.html">
+                    <img src="./imagenes/intro.jpg" alt="imagen" class="imagenes">
+                    <img src="./imagenes/muradin.jpg" alt="imagen" class="imagenes">
+                    <img src="./imagenes/horda.jpg" alt="imagen" class="imagenes">
+                </a>
                 <footer>
                     <div>
                         <p class="icon-male">País</p>
@@ -48,44 +56,50 @@
         </section>
         <section id="secundaria">
             <h3> FOTOS secundarias </h3>
-            <figure>
-                <h4 title="Foto 2">Foto 2</h4>
-                <a href="detalle.html"><img src="./imagenes/muradin.jpg" alt="imagen"></a>
-                <footer>
-                    <div>
-                        <p class="icon-female">País</p>
-                        <p class="icon-calendar">Fecha: 2023-09-25</p>
-                    </div> 
-                </footer>
-            </figure>
-            <figure>
-                <h4 title="Foto 3">Foto 3</h4>
-                <a href="detalle.html"><img src="./imagenes/muradin.jpg" alt="imagen"></a>
-                <footer>
-                    <div>
-                        <p class="icon-female">País</p>
-                        <p class="icon-calendar">Fecha: 2023-09-25</p>
-                    </div> 
-                </footer>
-            </figure>
-            <figure>
-                <h4 title="Foto 4">Foto 4</h4>
-                <a href="detalle.html"><img src="./imagenes/muradin.jpg" alt="imagen"></a>
-                <footer>
-                    <div>
-                        <p class="icon-female">País</p>
-                        <p class="icon-calendar">Fecha: 2023-09-25</p>
-                    </div> 
-                </footer>
-            </figure>
+            <aside>
+                <figure>
+                    <h4 title="Foto 2">Foto 2</h4>
+                    <a href="detalle.html"><img src="./imagenes/muradin.jpg" alt="imagen"></a>
+                    <footer>
+                        <div>
+                            <p class="icon-female">País</p>
+                            <p class="icon-calendar">Fecha: 2023-09-25</p>
+                        </div> 
+                    </footer>
+                </figure>
+                <figure>
+                    <h4 title="Foto 3">Foto 3</h4>
+                    <a href="detalle.html"><img src="./imagenes/intro.jpg" alt="imagen"></a>
+                    <footer>
+                        <div>
+                            <p class="icon-female">País</p>
+                            <p class="icon-calendar">Fecha: 2023-09-25</p>
+                        </div> 
+                    </footer>
+                </figure>
+                <figure>
+                    <h4 title="Foto 4">Foto 4</h4>
+                    <a href="detalle.html"><img src="./imagenes/horda.jpg" alt="imagen"></a>
+                    <footer>
+                        <div>
+                            <p class="icon-female">País</p>
+                            <p class="icon-calendar">Fecha: 2023-09-25</p>
+                        </div> 
+                    </footer>
+                </figure>
+            </aside>
+            
         </section>
     </main>
     <footer>
         <p>&copy;
             <time datetime ="2023-09-25"> José Ángel Mercadillo & Octavio Gregorio </time>
-            <abbr title = "DAW"> Practica 3 </abbr>
+            <abbr title = "DAW"> Practica 4 </abbr>
         </p>
-    </footer> 
+    </footer>
+    <script>
+        scroll();
+    </script> 
 </body>
 
 </html>

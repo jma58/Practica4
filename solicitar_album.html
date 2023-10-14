@@ -4,39 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="./imagenes/sunegamilogo.png">
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href ="fontello/css/fontello.css">
     <title>Impresón de álbum-SUNEGAMI</title>
-    <style>
-        table, tr, th, td {
-        border: 1px solid black;
-        }
-    </style>
 </head>
 <body>
     <header>
         <a href="index.html"><img src="./imagenes/sunegamilogo.png" alt="logo"></a>
-        <h1> Impresón de álbum - SUNEGAMI</h1>
-
-        <nav id="menu">
-            <!-- <label for="chkMenu">&equiv;</label>
-            <input type="checkbox" id="chkMenu"> -->
+        <h1> Impresón de álbum - SUNEGAMI</h1>  
+        <form>
+            <input type="search" class="busqueda">
+             <input type="submit" value="Buscar">
+        </form>
+        <aside>
             <ul>
-                <li><a href="index2.html" class="icon-home"><span>Inicio</span></a></li>
-                <li><a href="index.html" class="icon-home"><span>Cerrar sesión</span></a></li>
-                <li><a href="buscar.html" class="icon-search"><span>Buscar</span></a></li>
-                <li><a href="usuario.html" class="icon-search"><span>Mi usuario(Menú usuario registrado)</span></a></li>
-            </ul>
-        </nav>
-        
+                <ol><a href="login.html" class="icon-login"><span>Login</span></a></ol>
+                <ol><a href="registro.html" class="icon-doc-new"><span>Registro</span></a></ol>
+            </ul>   
+        </aside>       
     </header>
-    <main>
-        <section id="seccion">
+    <nav id="menu">
+        <label for="chkMenu">&equiv;</label>
+        <input type="checkbox" id="chkMenu">
+        <ul>
+            <li><a href="index2.html" class="icon-home"><span>Inicio</span></a></li>
+            <li><a href="index.html" class="icon-home"><span>Cerrar sesión</span></a></li>
+            <li><a href="buscar.html" class="icon-search"><span>Buscar</span></a></li>
+            <li><a href="usuario.html" class="icon-search"><span>Mi usuario(Menú usuario registrado)</span></a></li>
+        </ul>
+    </nav>
+    <main id="mainalbum">
+        <section id="intro">
             <h2> Solicitud de impresión de álbum </h2>
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus perferendis atque ipsum provident dolorem! Eius enim unde ea veniam eum nihil commodi quod itaque quaerat ipsum! Debitis quibusdam enim aliquid.</p>
         </section>
-        <section>
+        <section id="tarifas">
             <h2>Tarifas</h2>
             <table>
-                <caption>Tarifas</caption>
+                <!--<caption>Tarifas</caption>-->
                     <tr>
                         <th scope="col">Concepto</th>
                         <th scope="col">Tarifa</th>  
@@ -67,10 +72,10 @@
                     </tr>    
             </table>
         </section>
-        <aside>
+        <section id="formulario">
             <form action="respuesta_solicitar_album.html">
-                <section id="formulario">
-                    <h2>Formulario de soicitud</h2>
+                <h2 id="titulo">Formulario de solicitud</h2>
+                <aside id="izq">
                     <p>
                         <label for="nombre">Nombre: </label>
                         <input type="text" id="nombre" name="nombre" maxlength="200" placeholder="Nombre" required>(*)
@@ -104,14 +109,16 @@
                             <option value="40">Valencia</option>
                         </select>
                     
-                    <label for="provincia"> </label>
-                        <select id="provincia" name="provincia">
-                            <option value="" disabled selected hidden>Provincia</option>
-                            <option value="1">Valencia</option>
-                            <option value="33">murcia</option>
-                            <option value="40">Andalucia</option>
-                        </select>(*)
-                    </p>
+                        <label for="provincia"> </label>
+                            <select id="provincia" name="provincia">
+                                <option value="" disabled selected hidden>Provincia</option>
+                                <option value="1">Valencia</option>
+                                <option value="33">murcia</option>
+                                <option value="40">Andalucia</option>
+                            </select>(*)
+                        </p>
+                </aside>
+                <aside id="der">
                     <p>
                         <label for="telefono">Telefono: </label>
                         <input type="tel" id="telefono" name="telefono" placeholder="### ## ## ##" >
@@ -128,7 +135,7 @@
                         <label for="res">Resolución de impresión: </label>
                         <input type="range" id="res" name="res" min="150" max="900" step="150" value="150" onchange="document.getElementById('outres').value=value" list="tickmarks">
                         <output id="outres" name="outres" for="res">150</output>
-
+    
                         <datalist id = "tickmarks">
                             <option value="150"></option>
                             <option value="300"></option>
@@ -137,9 +144,7 @@
                             <option value="750"></option>
                             <option value="900"></option>
                         </datalist>
-
-
-                    </p>
+                    </p>  
                     <p>
                         <label for="album">Album de SUNEGAMI: </label>
                         <select id="album" name="album">
@@ -158,15 +163,16 @@
                         <label for="impresion">Impresión a color?: </label>
                         <input type="checkbox" id="impresion" name="impresion">
                     </p>    
-                    <input type="submit" value="Enviar !">
-                </section>
-            </form>
-        </aside>
+                    <input type="submit" value="Enviar !">        
+                </form>
+                </aside>
+                
+        </section>
     </main>
     <footer>
         <p>&copy;
             <time datetime ="2023-09-25"> José Ángel Mercadillo & Octavio Gregorio </time>
-            <abbr title = "DAW"> Practica 3 </abbr>
+            <abbr title = "DAW"> Practica 4 </abbr>
         </p>
     </footer>
 </body>
