@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="./imagenes/sunegamilogo.png">
-    <title>Detalle de Foto-SUNEGAMI</title>
     <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href ="fontello/css/fontello.css">
+    <title>Detalle de Foto-SUNEGAMI</title>
 </head>
 <body>
     <header>  
@@ -15,34 +16,42 @@
             <input type="search" class="busqueda">
             <input type="submit" value="Buscar">
         </form>
-        <ul>
-            <li><a href="login.html" class="icon-login"><span>Login</span></a></li>
-            <li><a href="registro.html" class="icon-doc-new"><span>Registro</span></a></li>
-        </ul>   
+        <aside>
+            <ul>
+                <ol><a href="login.html" class="icon-login"><span>Login</span></a></ol>
+                <ol><a href="registro.html" class="icon-doc-new"><span>Registro</span></a></ol>
+            </ul>   
+        </aside> 
     </header>
-    <nav>
+    <nav id="menu"> 
+        <label for="chkMenu">&equiv;</label>
+        <input type="checkbox" id="chkMenu">
         <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="buscar.html">Buscar</a></li>
+            <li><a href="index.html" class="icon-home"><span>Inicio</span></a></li>
+            <li><a href="buscar.html" class="icon-search"><span>Buscar</span></a></li>
         </ul>
     </nav>
     <main>
         <section id="detalle-foto">
             <h2>Detalle de la Foto</h2>
-            <div>
-                <img src="./imagenes/unnamed.jpg" alt="Foto Seleccionada">
-                <h3>Título de la Foto Seleccionada</h3>
-                <p>Fecha: 2023-09-26</p>
-                <p>País: País de la Foto</p>
+            <figure>
+                <img src="./imagenes/intro.jpg" alt="Foto Seleccionada">
+                <figcaption>Título de la Foto Seleccionada</figcaption>
+            </figure>
+            <aside>
+                <p class="icon-calendar">Fecha: 2023-09-26</p>
+                <p class="icon-globe">País: País de la Foto</p>
                 <p>Álbum de Fotos: Álbum de la Foto</p>
-                <p>Usuario: Nombre de Usuario</p>
-            </div>
+                <p class="icon-user-circle-o">Usuario: Nombre de Usuario</p>
+            </aside>
+                
+            
         </section>
     </main>
     <footer>
         <p>&copy;
             <time datetime ="2023-09-25"> José Ángel Mercadillo & Octavio Gregorio </time>
-            <abbr title = "DAW"> Practica 3 </abbr>
+            <abbr title = "DAW"> Practica 4 </abbr>
         </p>
     </footer> 
 </body>

@@ -1,3 +1,11 @@
+table, tr, th, td {
+    border: 1px solid black;
+    }
+table{
+    display: flex;
+    justify-content: space-around;
+}
+
 img{
     max-width: 100%;
     max-height: 100%;
@@ -9,6 +17,15 @@ header{
     text-align: center;
 }
 
+button{
+    padding: .5em;
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px #999;
+}
+
+section{
+    text-align: center;
+}
 body{
     min-height: 100vh;
     min-width: 400px;  
@@ -17,7 +34,6 @@ body{
     grid-template-rows: auto auto 1fr auto;
     margin:0%;
     color:#dac8c8;
-    text-align: center;
 }
 
 header>a{
@@ -29,56 +45,238 @@ header>a{
 }
 
 .busqueda{
-    width: 85%;
+    width: 90%;
     border-radius: 5px;
 }
 
-body>nav{
+
+body>header>aside>ul{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+aside>ul>il>a:hover{
+    color:rgb(255, 255, 255);
+}
+/*identificadores seccion*/
+#principal{
+    text-align: center;
+}
+
+/*ATENCION con este grid controlamos responsive*/
+/*SECCIONES*/
+#secundaria>aside{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
+    grid-gap: 1.5em;
+}
+#formulario-busqueda{
+    display:flex;
+    text-align: left;
+    justify-content: space-around;
+}
+
+#formulario-busqueda>form>aside{
+    display: flex;
+    justify-content: flex-end;
+}
+
+/*FORMULARIO ALBUMNES*/
+#mainalbum{
+    display: grid;
+    grid-template-columns: repeat(auto-fill);
+    grid-template-areas: "intro intro" "tarifas formulario";
+}
+
+#intro{
+   
+    grid-area: intro;
+}
+
+#tarifas{
+    display: block;
+    grid-area: tarifas;
+}
+
+#formulario{
+    grid-area: formulario;
+}
+
+/*SEPARAR FORMULARIO ALBUMNES*/
+#formulario>form{
+    display: grid;
+    grid-template-columns: repeat(auto-fill);
+    grid-template-areas: "titulo titulo" "izquierda derecha";
+}
+
+#izq{
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+    grid-area: izquierda;
+}
+#der{
+    display: flex;
+   flex-direction: column;
+   align-items: flex-start;   
+    grid-area: derecha;
+}
+
+#titulo{
+    grid-area: titulo;
+}
+
+
+#registro>form{
+    display: grid;
+    grid-template-columns: repeat(auto-fill);
+    grid-template-areas: "sec fot";
+}
+
+#seccion{
+    grid-area: sec;
+}
+
+#foto{
+    grid-area: fot;
+}
+
+
+/*DETALLE*/
+#detalle-foto{
+    display: grid;
+    grid-template-columns: repeat(auto-fill);
+    grid-template-areas: "h2 h2" "aside figure";
+}
+#detalle-foto>h2{
+    grid-area: h2;
+}
+#detalle-foto>figure{
+    grid-area: figure;
+}
+#detalle-foto>aside{
+    grid-area: aside;
+}
+
+
+h3{
+    text-align: center;
+}
+
+/*NAVEGACION*/
+#menu{
     position: sticky;
     top:0;
     background:linear-gradient(to right,#f4f2f2,#292828);
 }
-body>nav>ul>il{
-    color:#dac8c8;
-    text-align: center;
+
+#menu>ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 2s;
 }
-#secundaria>aside{
+
+#menu>label{
+    cursor:pointer;
+    background-color: white;
+}
+
+#chkMenu{
+    display: none;
+    color: white;
+}
+
+#chkMenu:checked+ul {
+    max-height: 14em;
+}
+
+body>footer>p{
     display:flex;
+    flex-direction: row;
+    justify-content: center;
+    color: white;
 }
 
-body>header{
-    display: grid;
-    grid-template-areas: "a h1 h1 h1 aside" "a form form form aside" "a h2 h2 h2 aside";
-}
-body>header>a{
-    grid-area: a;
-}
-body>header>form{
-    grid-area: form;
-}
-body>header>aside{
-    grid-area: aside;
-}
-body>header>h1{
-    grid-area: h1;
-}
-body>header>h2{
-    grid-area: h2;
+#menu>ul>li>a{
+    display: block;
+    color:rgb(2, 0, 0);
 }
 
-@media screen and (max-width : 500px){
+#menu>ul>li>a:hover{
+    color:rgb(229, 53, 9);
+}
 
-    body{
-        background-color: grey;
+input{
+    padding: .5em;
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px #999;
+}
+
+
+/*MEDIAQUERIES*/
+
+@media ( min-width: 360px){
+    #menu>ul>li{
+        display:inline-block;
+        padding: .4em;
+    }
+    #menu>label[for]{
+        display: none;
+    }
+    #menu>ul{
+        display: block;
+        min-height: 2em;
+        max-height: 14em;
+        
+    }
+    #menu>ul>li>a>span{
+        display:none;
     }
 
-}
-
-@media screen and (max-width : 800px) and (min-width : 501px){
-
-    body{
-        background-color: burlywood;
-        font-size: 2m;
+    /* GRID DE HEADER*/
+    body>header{
+        display: grid;
+        grid-template-columns: repeat(auto-fill);
+        grid-template-areas: "a h1 h1 h1 aside" "a form form form aside" "a h2 h2 h2 aside";
+        
+    }
+   
+    body>header>a{
+        grid-area: a;
+    }
+    body>header>form{
+        grid-area: form;
     }
 
+    body>header>aside{
+        grid-area: aside;
+        display: flex;
+        align-content: space-around;
+        justify-content: center;
+    }
+    body>header>h1{
+        grid-area: h1;
+    }
+    body>header>h2{
+        grid-area: h2;
+    } 
+}
+
+@media ( min-width: 540px){
+    #menu>ul>li>a>span{
+        display: inline-block;
+        padding: .60em;
+        justify-content: center;
+        justify-items: center;
+    }
+   
+
+}
+@media (min-width: 700px){  
+    
 }
