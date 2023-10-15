@@ -16,13 +16,24 @@ function scroll(){
   }
 }
 
-function modal(){
+function login(){
   var modal = document.getElementById('login');
 
   // When the user clicks anywhere outside of the modal, close it
   window.onclick = function(event) {
     if (event.target == modal) {
       modal.style.display = "none";
+    }
+  }
+}
+
+function registro(){
+  var modal2 = document.getElementById('registro');
+
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal2.style.display = "none";
     }
   }
 }
