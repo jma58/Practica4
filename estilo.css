@@ -2,9 +2,14 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+#contenedor_form{
+    display: flex;
+}
+
 table, tr, th, td {
     border: 1px solid black;
-    }
+}
+
 table{
     display: flex;
     justify-content: space-around;
@@ -23,6 +28,7 @@ legend{
     font-weight: bold;
     text-align: left;
 }
+
 img{
     max-width: 100%;
     max-height: 100%;
@@ -64,6 +70,11 @@ button{
     padding: .5em;
     border-radius: 5px;
     box-shadow: 1px 1px 1px #999;
+}
+
+#boton{
+    display:flex;
+    justify-content: flex-end;
 }
 
 button:hover {
@@ -110,11 +121,12 @@ aside>ul>il>a:hover{
 /*identificadores seccion*/
 #principal{
     text-align: center;
-    margin: 1em;
+    margin: 1em 5em 1em 5em;
 }
 
 #secundaria{
     margin:1em;
+    margin: 1em 5em 1em 5em;
 }
 
 /*ATENCION con este grid controlamos responsive*/
@@ -126,8 +138,8 @@ aside>ul>il>a:hover{
 }
 #formulario-busqueda{
     display:flex;
-    text-align: left;
-    justify-content: space-around;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
 #formulario-busqueda>form>aside{
@@ -211,6 +223,27 @@ aside>ul>il>a:hover{
 }
 /*REGISTRO*/
 
+#registro>form{
+    display: grid;
+    grid-template-areas: "sec fot" "sec log";
+    grid-template-rows: auto auto 1fr auto;
+    align-items: center;
+    justify-items: center;
+    justify-content: space-evenly;
+}
+
+#seccion{
+    grid-area: sec;
+}
+
+#foto{
+    grid-area: fot;
+}
+
+#log{
+    grid-area: log;
+}
+
 /*FORMULARIO ALBUMNES*/
 #mainalbum{
     display: grid;
@@ -254,19 +287,6 @@ aside>ul>il>a:hover{
     grid-area: titulo;
 }
 
-
-#registro>form{
-    display: grid;
-    grid-template-areas: "sec fot";
-}
-
-#seccion{
-    grid-area: sec;
-}
-
-#foto{
-    grid-area: fot;
-}
 
 
 /*DETALLE*/

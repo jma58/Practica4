@@ -26,7 +26,6 @@
                     <button onclick="document.getElementById('registro').style.display='block'" class="icon-doc-new">Registro</button>
                 </li>
             </ul>   
-        </aside>
     </header>
     <nav id="menu">
         <ul>
@@ -34,10 +33,9 @@
             <li><a href="buscar.html" class="icon-search"><span>Buscar</span></a></li>
         </ul>
     </nav>
-    <main>
-        <section>
-            <h2>Realizar una búsqueda de fotos</h2>
-            <aside id="formulario-busqueda">
+    <main id="formulario-busqueda">
+            <fieldset>
+                <legend>Realizar una búsqueda de fotos</legend>
                 <form action="resultado.html" method="get">
                     <p>
                         <label for="titulo">Título:</label>
@@ -53,12 +51,12 @@
                         <label for="pais">País:</label>
                         <input type="text" id="pais" name="pais">
                     </p>
-                    <aside>
+                    <aside id="boton">
                         <button type="submit">Buscar</button>
                     </aside>
                 </form>
-            </aside> 
-        </section>
+            </fieldset>
+        </aside>          
     </main>
     <!--************************************************************************************-->
     <aside contenteditable="false">
@@ -66,15 +64,14 @@
             <form action="index2.html" class="modal-content animate">
             <section id="seccion">
                 <span onclick="document.getElementById('login').style.display='none'" class="close" title="Close Modal">&times;</span>
-                <h3> INICIAR SESIÓN </h3>
-                
-                    <p>Introduce tus datos</p>
-                    <aside>
-                        
+                <fieldset>  
+                    <legend>DATOS DE ACCESO</legend>  
+                    <h3> INICIAR SESIÓN </h3>
+                                      
                     <!-- <p><label for="nombre">Nombre: </label><input type="text" id="nombre" name="nombre" required></p>
                         <p><label>Apellidos: <input type="text" id="apellidos" name="apellidos" required></label></p>
                         <p><label for="pass2"> Repite contraseña: </label><input type="password" pattern="[a-zA-Z0-9._-]{4,20}" id="pass2" name="pass2" required></p>-->
-                        <div>
+                        
                             <p>
                                 <label for="email">Email: </label>
                                 <input type="email" id="email" name="email" required>
@@ -83,17 +80,15 @@
                                 <label for="pass">Contraseña: </label>
                                 <input type="password" pattern="[a-zA-Z0-9._-]{4,20}" id="pass" name="pass" required>
                             </p>
-                        </div>
                         
                         <button type="submit">Inicar sesión</button>
                         <p>
                             <label><input type="checkbox" checked="checked" name="remember"> Recordar</label>
                         </p>
                         <p>
-                            <span class="psw">Olvidaste <a href="#">contraseña?</a></span>
+                            <span class="psw">Olvidaste tu<a href="#">contraseña?</a></span>
                         </p>
-                       
-                    </aside>  
+                    </fieldset>
                 </form> 
             </section>
         </main>
@@ -103,49 +98,54 @@
         <main id="registro" class="modal2">
             <form action="index.html"class="modal2-content animate">
                 <section id="seccion2">
-                    <h3> REGISTRO </h3>
-                        <p>Introduce tus datos</p>
-                        <div>
+                    <fieldset>  
+                        <legend>TUS DATOS</legend>  
+                        <h3> REGISTRO </h3>
+                            <p>Introduce tus datos</p>
                             <p><label for="nombre">Nombre: </label><input type="text" id="nombre" name="nombre" required></p>
-                        <p><label>Apellidos: <input type="text" id="apellidos" name="apellidos" required></label></p>
-                        <p><label for="pass">Contraseña: </label><input type="password" pattern="[a-zA-Z0-9._-]{4,20}" id="pass" name="pass" required></p>
-                        <p><label for="pass2"> Repite contraseña: </label><input type="password" pattern="[a-zA-Z0-9._-]{4,20}" id="pass2" name="pass2" required></p>
-                        <p><label for="email">Email: </label><input type="email" id="email" name="email" required></p>
-                        <p>Sexo:</p>
-                            <input type="radio" id="masculino" name="sexo" value="H"> 
-                            <label for="masculino">H</label>
-                            <input type="radio" id="femenino"  name="sexo" value="M"> 
-                            <label for="femenino">M</label>
-                        <p><label for="fecha1">Fecha de nacimiento:</label>
-                        <input type="date" id="fecha1" name="fecha1"></p>
-                        <p><label for="ciudad">Ciudad: </label>
-                            <select id="ciudad" name="ciudad">
-                                <option value="1">Alicante</option>
-                                <option value="33">Madrid</option>
-                                <option value="40">Valencia</option>
-                            </select>
-                        </p>
-                        <p><label for="pais">País: </label>
-                            <select id="pais" name="pais">
-                                <option value="1">Alemania</option>
-                                <option value="33">España</option>
-                                <option value="40">Francia</option>
-                            </select>
-                        </p> 
-                        </div>    
+                            <p><label>Apellidos: <input type="text" id="apellidos" name="apellidos" required></label></p>
+                            <p><label for="pass">Contraseña: </label><input type="password" pattern="[a-zA-Z0-9._-]{4,20}" id="pass" name="pass" required></p>
+                            <p><label for="pass2"> Repite contraseña: </label><input type="password" pattern="[a-zA-Z0-9._-]{4,20}" id="pass2" name="pass2" required></p>
+                            <p><label for="email">Email: </label><input type="email" id="email" name="email" required></p>
+                            <p>Sexo:</p>
+                                <input type="radio" id="masculino" name="sexo" value="H"> 
+                                <label for="masculino">H</label>
+                                <input type="radio" id="femenino"  name="sexo" value="M"> 
+                                <label for="femenino">M</label>
+                            <p><label for="fecha1">Fecha de nacimiento:</label>
+                            <input type="date" id="fecha1" name="fecha1"></p>
+                            <p><label for="ciudad">Ciudad: </label>
+                                <select id="ciudad" name="ciudad">
+                                    <option value="1">Alicante</option>
+                                    <option value="33">Madrid</option>
+                                    <option value="40">Valencia</option>
+                                </select>
+                            </p>
+                            <p><label for="pais">País: </label>
+                                <select id="pais" name="pais">
+                                    <option value="1">Alemania</option>
+                                    <option value="33">España</option>
+                                    <option value="40">Francia</option>
+                                </select>
+                            </p> 
+                    </fieldset>   
                 </section>
                 <section id="foto">
                     <span onclick="document.getElementById('registro').style.display='none'" class="close" title="Close Modal">&times;</span>
-                    <h4>Foto:</h4>
-                    <label for="input-image"></label> 
-                        <figure>
-                            <img src="./imagenes/user1.jpg" alt="imagen">
-                        </figure> 
-                    <input type="file" accept="image/jpg, image/png, image/gif, image/jpeg" id="input-image">
+                    <fieldset>   
+                        <legend>TU FOTO</legend> 
+                            <h4>Foto:</h4>
+                            <label for="input-image"></label> 
+                                <figure>
+                                    <img src="./imagenes/user1.jpg" alt="imagen">
+                                </figure> 
+                            <input type="file" accept="image/jpg, image/png, image/gif, image/jpeg" id="input-image">
+                    </fieldset>     
                 </section>
-                <!-- <option value="seleccionar">Seleccionar</option> -->    
-                <input type="submit" value="Registrarse">
-            </form>
+                <section id="log">
+                    <input type="submit" value="Registrarse">
+                </section>   
+            </form> 
         </main>
     </aside>
     <!--************************************************************************************-->

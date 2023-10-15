@@ -40,7 +40,7 @@
     <main>
         
     </main>
-        <!--************************************************************************************-->
+         <!--************************************************************************************-->
     <aside contenteditable="false">
         <main id="login" class="modal" >
             <form action="index2.html" class="modal-content animate">
@@ -113,20 +113,21 @@
                     </fieldset>   
                 </section>
                 <section id="foto">
-                    <fieldset>  
+                    <span onclick="document.getElementById('registro').style.display='none'" class="close" title="Close Modal">&times;</span>
+                    <fieldset>   
                         <legend>TU FOTO</legend> 
-                        <span onclick="document.getElementById('registro').style.display='none'" class="close" title="Close Modal">&times;</span>
-                        <h4>Foto:</h4>
-                        <label for="input-image"></label> 
-                            <figure>
-                                <img src="./imagenes/user1.jpg" alt="imagen">
-                            </figure> 
-                        <input type="file" accept="image/jpg, image/png, image/gif, image/jpeg" id="input-image">
-                    </fieldset>  
+                            <h4>Foto:</h4>
+                            <label for="input-image"></label> 
+                                <figure>
+                                    <img src="./imagenes/user1.jpg" alt="imagen">
+                                </figure> 
+                            <input type="file" accept="image/jpg, image/png, image/gif, image/jpeg" id="input-image">
+                    </fieldset>     
                 </section>
-                <!-- <option value="seleccionar">Seleccionar</option> -->    
-                <input type="submit" value="Registrarse">
-            </form>
+                <section id="log">
+                    <input type="submit" value="Registrarse">
+                </section>   
+            </form> 
         </main>
     </aside>
     <!--************************************************************************************-->
