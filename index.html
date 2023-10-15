@@ -6,7 +6,7 @@
     <link rel="icon" href="./imagenes/sunegamilogo.png">
     <link rel="stylesheet" href="estilo.css">
     <link rel="stylesheet" href ="fontello/css/fontello.css">
-    <script src="scroll.js"></script>
+    <script src="javas.js"></script>
     <title>Página Inicio-SUNEGAMI</title>
 </head>
 <body>
@@ -20,8 +20,15 @@
         </form>
         <aside>
             <ul>
-                <il><a href="login.html" class="icon-login"><span>Login</span></a></il>
-                <il><a href="registro.html" class="icon-doc-new"><span>Registro</span></a></il>
+                <li>
+                    <button onclick="document.getElementById('login').style.display='block'" class="icon-login">Iniciar</button>
+                </li>
+                <li>
+                    <button onclick="document.getElementById('login').style.display='block'" class="icon-doc-new">Registro</button>
+                </li>
+                
+                <!--<il><a href="login.html" class="icon-login"><span>Login</span></a></il>
+                <il><a href="registro.html" class="icon-doc-new"><span>Registro</span></a></il>-->
             </ul>   
         </aside> 
     </header>
@@ -118,18 +125,55 @@
                     </footer>
                 </figure>
             </aside>
-           
         </section>
     </main>
-    <footer>
-        <p>&copy;
-            <time datetime ="2023-09-25"> José Ángel Mercadillo & Octavio Gregorio </time>
-            <abbr title = "DAW"> Practica 4 </abbr>
-        </p>
-    </footer>
+    <aside contenteditable="false">
+        <main id="login" class="modal" >
+            <form action="index2.html"class="modal-content animate">
+            <section id="seccion">
+                <span onclick="document.getElementById('login').style.display='none'" class="close" title="Close Modal">&times;</span>
+                <h3> INICIAR SESIÓN </h3>
+                
+                    <p>Introduce tus datos</p>
+                    <aside>
+                        
+                    <!-- <p><label for="nombre">Nombre: </label><input type="text" id="nombre" name="nombre" required></p>
+                        <p><label>Apellidos: <input type="text" id="apellidos" name="apellidos" required></label></p>
+                        <p><label for="pass2"> Repite contraseña: </label><input type="password" pattern="[a-zA-Z0-9._-]{4,20}" id="pass2" name="pass2" required></p>-->
+                        <div>
+                            <p>
+                                <label for="email">Email: </label>
+                                <input type="email" id="email" name="email" required>
+                            </p>
+                            <p>
+                                <label for="pass">Contraseña: </label>
+                                <input type="password" pattern="[a-zA-Z0-9._-]{4,20}" id="pass" name="pass" required>
+                            </p>
+                        </div>
+                        
+                        <button type="submit">Inicar sesión</button>
+                        <p>
+                            <label><input type="checkbox" checked="checked" name="remember"> Recordar</label>
+                        </p>
+                        <p>
+                            <span class="psw">Olvidaste <a href="#">contraseña?</a></span>
+                        </p>
+                       
+                    </aside>  
+                </form> 
+            </section>
+        </main>
+        <footer>
+            <p>&copy;
+                <time datetime ="2023-09-25"> José Ángel Mercadillo & Octavio Gregorio </time>
+                <abbr title = "DAW"> Practica 4 </abbr>
+            </p>
+        </footer> 
+    </aside>
+    
     <script>
         scroll();
+        modal();
     </script>
 </body>
-
 </html>
