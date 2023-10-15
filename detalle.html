@@ -6,22 +6,26 @@
     <link rel="icon" href="./imagenes/sunegamilogo.png">
     <link rel="stylesheet" href="estilo.css">
     <link rel="stylesheet" href ="fontello/css/fontello.css">
+    <script src="javas.js"></script>
     <title>Detalle de Foto-SUNEGAMI</title>
 </head>
 <body>
     <header>  
         <a href="index.html"><img src="./imagenes/sunegamilogo.png" alt="logo"></a>
-        <h1>Detalle de Foto-SUNEGAMI</h1>
         <form>
             <input type="search" class="busqueda">
             <input type="submit" value="Buscar">
         </form>
         <aside>
             <ul>
-                <ol><a href="login.html" class="icon-login"><span>Login</span></a></ol>
-                <ol><a href="registro.html" class="icon-doc-new"><span>Registro</span></a></ol>
-            </ul>   
-        </aside> 
+                <li>
+                    <button onclick="document.getElementById('login').style.display='block'" class="icon-login">Iniciar</button>
+                </li>
+                <li>
+                    <button onclick="document.getElementById('registro').style.display='block'" class="icon-doc-new">Registro</button>
+                </li>
+            </ul> 
+        </aside>
     </header>
     <nav id="menu"> 
         <label for="chkMenu">&equiv;</label>
@@ -46,7 +50,7 @@
             </aside>    
         </section>
     </main>
-     <!--************************************************************************************-->
+    <!--************************************************************************************-->
     <aside contenteditable="false">
         <main id="login" class="modal" >
             <form action="index2.html" class="modal-content animate">
@@ -119,28 +123,33 @@
                     </fieldset>   
                 </section>
                 <section id="foto">
-                    <fieldset>  
+                    <span onclick="document.getElementById('registro').style.display='none'" class="close" title="Close Modal">&times;</span>
+                    <fieldset>   
                         <legend>TU FOTO</legend> 
-                        <span onclick="document.getElementById('registro').style.display='none'" class="close" title="Close Modal">&times;</span>
-                        <h4>Foto:</h4>
-                        <label for="input-image"></label> 
-                            <figure>
-                                <img src="./imagenes/user1.jpg" alt="imagen">
-                            </figure> 
-                        <input type="file" accept="image/jpg, image/png, image/gif, image/jpeg" id="input-image">
-                    </fieldset>  
+                            <h4>Foto:</h4>
+                            <label for="input-image"></label> 
+                                <figure>
+                                    <img src="./imagenes/user1.jpg" alt="imagen">
+                                </figure> 
+                            <input type="file" accept="image/jpg, image/png, image/gif, image/jpeg" id="input-image">
+                    </fieldset>     
                 </section>
-                <!-- <option value="seleccionar">Seleccionar</option> -->    
-                <input type="submit" value="Registrarse">
-            </form>
+                <section id="log">
+                    <input type="submit" value="Registrarse">
+                </section>   
+            </form> 
         </main>
     </aside>
-     <!--************************************************************************************-->
+    <!--************************************************************************************-->
     <footer>
         <p>&copy;
             <time datetime ="2023-09-25"> José Ángel Mercadillo & Octavio Gregorio </time>
             <abbr title = "DAW"> Practica 4 </abbr>
         </p>
-    </footer> 
+    </footer>
+    <script>
+        login();
+        registro();
+    </script> 
 </body>
 </html>

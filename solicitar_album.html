@@ -6,21 +6,21 @@
     <link rel="icon" href="./imagenes/sunegamilogo.png">
     <link rel="stylesheet" href="estilo.css">
     <link rel="stylesheet" href ="fontello/css/fontello.css">
+    <script src="javas.js"></script>
     <title>Impresón de álbum-SUNEGAMI</title>
 </head>
 <body>
     <header>
         <a href="index.html"><img src="./imagenes/sunegamilogo.png" alt="logo"></a>
-        <h1> Impresón de álbum - SUNEGAMI</h1>  
         <form>
             <input type="search" class="busqueda">
              <input type="submit" value="Buscar">
         </form>
         <aside>
-            <ul>
-                <ol><a href="login.html" class="icon-login"><span>Login</span></a></ol>
-                <ol><a href="registro.html" class="icon-doc-new"><span>Registro</span></a></ol>
-            </ul>   
+            <figure>
+                <img src="./imagenes/user1.jpg" alt="usu" id="usuario">
+                <figcaption>Usuario: Etzio</figcaption>
+            </figure> 
         </aside>       
     </header>
     <nav id="menu">
@@ -164,9 +164,8 @@
                         <input type="checkbox" id="impresion" name="impresion">
                     </p>    
                     <input type="submit" value="Enviar !">        
-                </form>
                 </aside>
-                
+            </form>  
         </section>
     </main>
     <footer>
@@ -175,6 +174,10 @@
             <abbr title = "DAW"> Practica 4 </abbr>
         </p>
     </footer>
+    <script>
+        login();
+        registro();
+    </script>
 </body>
 
 </html>
