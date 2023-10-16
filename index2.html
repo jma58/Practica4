@@ -18,9 +18,22 @@
         </form>
             <aside>
                 <figure>
-                    <img src="./imagenes/user1.jpg" alt="usu" id="usuario">
+                    <button class="mipanel" onclick=openNav()><img src="./imagenes/user1.jpg" alt="usu" id="usuario"></button>
                     <figcaption>Usuario: Etzio</figcaption>
-                </figure>              
+                </figure> 
+                <aside id="panel" class="lateral">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+                    <figure>
+                        <img src="./imagenes/user1.jpg" alt="usu" id="usuario">
+                        <figcaption>Usuario: Etzio</figcaption>
+                    </figure>
+                    <a href="index2.html">Mis datos</a>
+                    <a href="index.html">Darme de baja</a>
+                    <a href="index2.html">Mis álbumes</a>
+                    <a href="index2.html">Crear álbum</a>
+                    <a href="solicitar_album.html">Solicitar álbum</a>
+                    <a href="index.html">Salir</a>
+                </aside>             
             </aside>    
     </header>
     <nav id="menu"> 
@@ -32,7 +45,6 @@
             <li><a href="buscar.html" class="icon-search"><span>Buscar</span></a></li>
             <li><a href="solicitar_album.html" class="icon-search"><span>Solictar álbum</span></a></li>
             <li><a href="usuario.html" class="icon-search"><span>Mi usuario(Menú usuario registrado)</span></a></li>
-
         </ul>   
     </nav>
     <main>

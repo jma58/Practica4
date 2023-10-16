@@ -38,3 +38,14 @@ function registro(){
   }
 }
 
+
+  function openNav() {
+    document.getElementById("panel").style.width = "250px";
+  }
+  
+  function closeNav() {
+    document.getElementById("panel").style.width = "0";
+  }
+  
+
+

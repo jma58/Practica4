@@ -229,6 +229,51 @@ aside>ul>il>a:hover{
     grid-area: log;
 }
 
+/*PANEL*/
+.lateral  {
+    width: 0;
+    position: fixed;
+    background-color: #111;
+    z-index: 1;
+    height: 100%;
+    top: 0;
+    right: 0;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 80px;
+  }
+  
+.lateral a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+.lateral a:hover {
+    color: #f1f1f1;
+  }
+  
+.lateral .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+  }
+  
+.mipanel {
+    font-size: 20px;
+    cursor: pointer;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+  }
+  
+.mipanel:hover {
+    background-color:#444;
+  }
 /*FORMULARIO ALBUMNES*/
 #mainalbum{
     display: grid;

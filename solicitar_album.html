@@ -18,10 +18,22 @@
         </form>
         <aside>
             <figure>
-                <img src="./imagenes/user1.jpg" alt="usu" id="usuario">
-                <figcaption>Usuario: Etzio</figcaption>
+                <button class="mipanel" onclick=openNav()><img src="./imagenes/user1.jpg" alt="usu" id="usuario"></button>
             </figure> 
-        </aside>       
+            <aside id="panel" class="lateral">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+                <figure>
+                    <img src="./imagenes/user1.jpg" alt="usu" id="usuario">
+                    <figcaption>Usuario: Etzio</figcaption>
+                </figure><br>
+                <a href="index2.html">Mis datos</a>
+                <a href="index.html">Darme de baja</a>
+                <a href="index2.html">Mis álbumes</a>
+                <a href="index2.html">Crear álbum</a>
+                <a href="solicitar_album.html">Solicitar álbum</a>
+                <a href="index.html">Salir</a>
+            </aside>             
+        </aside>         
     </header>
     <nav id="menu">
         <label for="chkMenu">&equiv;</label>
