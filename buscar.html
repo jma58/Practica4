@@ -24,44 +24,46 @@
                 <li>
                     <button onclick="document.getElementById('registro').style.display='block'" class="icon-doc-new">Registro</button>
                 </li>
-            </ul>   
+            </ul>
+        </aside>   
     </header>
     <nav id="menu">
+        <label for="chkMenu">&equiv;</label>
+        <input type="checkbox" id="chkMenu">
         <ul>
             <li><a href="index.html" class="icon-home"><span>Inicio</span></a></li>
             <li><a href="buscar.html" class="icon-search"><span>Buscar</span></a></li>
         </ul>
     </nav>
     <main id="formulario-busqueda">
-            <fieldset>
-                <legend>Realizar una búsqueda de fotos</legend>
-                <form action="resultado.html" method="get">
-                    <p>
-                        <label for="titulo">Título:</label>
-                        <input type="text" id="titulo" name="titulo">
-                    </p>
-                    <p>
-                        <label for="fecha1">Fecha desde:</label>
-                        <input type="date" id="fecha1" name="fecha1">
-                        <label for="fecha2"> hasta:</label>
-                        <input type="date" id="fecha2" name="fecha2">
-                    </p>
-                    <p>
-                        <label for="pais">País:</label>
-                        <input type="text" id="pais" name="pais">
-                    </p>
-                    <aside id="boton">
-                        <button type="submit">Buscar</button>
-                    </aside>
-                </form>
-            </fieldset>
-        </aside>          
+        <fieldset>
+            <legend>Realizar una búsqueda de fotos</legend>
+            <form action="resultado.html" method="get">
+                <p>
+                    <label for="titulo">Título:</label>
+                    <input type="text" id="titulo" name="titulo">
+                </p>
+                <p>
+                    <label for="fecha1">Fecha desde:</label>
+                    <input type="date" id="fecha1" name="fecha1">
+                    <label for="fecha2"> hasta:</label>
+                    <input type="date" id="fecha2" name="fecha2">
+                </p>
+                <p>
+                    <label for="pais">País:</label>
+                    <input type="text" id="pais" name="pais">
+                </p>
+                <aside id="boton">
+                    <button type="submit">Buscar</button>
+                </aside>
+            </form>
+        </fieldset>         
     </main>
     <!--************************************************************************************-->
     <aside contenteditable="false">
-        <main id="login" class="modal" >
+        <aside id="login" class="modal" >
             <form action="index2.html" class="modal-content animate">
-            <section id="seccion">
+                <section id="seccion">
                 <span onclick="document.getElementById('login').style.display='none'" class="close" title="Close Modal">&times;</span>
                 <fieldset>  
                     <legend>DATOS DE ACCESO</legend>  
@@ -87,15 +89,15 @@
                         <p>
                             <span class="psw">Olvidaste tu<a href="#">contraseña?</a></span>
                         </p>
-                    </fieldset>
-                </form> 
-            </section>
-        </main>
+                    </fieldset>  
+                </section>
+            </form> 
+        </aside>
     </aside>
     <!--************************************************************************************-->
     <aside contenteditable="false">
-        <main id="registro" class="modal2">
-            <form action="index.html"class="modal2-content animate">
+        <aside id="registro" class="modal2">
+            <form action="index.html" class="modal2-content animate">
                 <section id="seccion2">
                     <fieldset>  
                         <legend>TUS DATOS</legend>  
@@ -103,16 +105,16 @@
                             <p>Introduce tus datos</p>
                             <p><label for="nombre">Nombre: </label><input type="text" id="nombre" name="nombre" required></p>
                             <p><label>Apellidos: <input type="text" id="apellidos" name="apellidos" required></label></p>
-                            <p><label for="pass">Contraseña: </label><input type="password" pattern="[a-zA-Z0-9._-]{4,20}" id="pass" name="pass" required></p>
+                            <p><label for="pass_reg">Contraseña: </label><input type="password" pattern="[a-zA-Z0-9._-]{4,20}" id="pass_reg" name="pass_reg" required></p>
                             <p><label for="pass2"> Repite contraseña: </label><input type="password" pattern="[a-zA-Z0-9._-]{4,20}" id="pass2" name="pass2" required></p>
-                            <p><label for="email">Email: </label><input type="email" id="email" name="email" required></p>
+                            <p><label for="email_reg">Email: </label><input type="email" id="email_reg" name="email_reg" required></p>
                             <p>Sexo:</p>
                                 <input type="radio" id="masculino" name="sexo" value="H"> 
                                 <label for="masculino">H</label>
                                 <input type="radio" id="femenino"  name="sexo" value="M"> 
                                 <label for="femenino">M</label>
-                            <p><label for="fecha1">Fecha de nacimiento:</label>
-                            <input type="date" id="fecha1" name="fecha1"></p>
+                            <p><label for="fec">Fecha de nacimiento:</label>
+                            <input type="date" id="fec" name="fec"></p>
                             <p><label for="ciudad">Ciudad: </label>
                                 <select id="ciudad" name="ciudad">
                                     <option value="1">Alicante</option>
@@ -120,8 +122,8 @@
                                     <option value="40">Valencia</option>
                                 </select>
                             </p>
-                            <p><label for="pais">País: </label>
-                                <select id="pais" name="pais">
+                            <p><label for="country">País: </label>
+                                <select id="country" name="country">
                                     <option value="1">Alemania</option>
                                     <option value="33">España</option>
                                     <option value="40">Francia</option>
@@ -141,11 +143,11 @@
                             <input type="file" accept="image/jpg, image/png, image/gif, image/jpeg" id="input-image">
                     </fieldset>     
                 </section>
-                <section id="log">
+                <aside id="log">
                     <input type="submit" value="Registrarse">
-                </section>   
+                </aside>   
             </form> 
-        </main>
+        </aside>
     </aside>
     <!--************************************************************************************-->
     <footer>

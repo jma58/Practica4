@@ -39,11 +39,11 @@
     <main>
         <h1>NECESITAS INICIAR SESIÓN PARA ACCEDER</h1>
     </main>
-         <!--************************************************************************************-->
-    <aside contenteditable="false">
-        <main id="login" class="modal" >
+     <!--************************************************************************************-->
+     <aside contenteditable="false">
+        <aside id="login" class="modal" >
             <form action="index2.html" class="modal-content animate">
-            <section id="seccion">
+                <section id="seccion">
                 <span onclick="document.getElementById('login').style.display='none'" class="close" title="Close Modal">&times;</span>
                 <fieldset>  
                     <legend>DATOS DE ACCESO</legend>  
@@ -69,15 +69,15 @@
                         <p>
                             <span class="psw">Olvidaste tu<a href="#">contraseña?</a></span>
                         </p>
-                    </fieldset>
-                </form> 
-            </section>
-        </main>
+                    </fieldset>  
+                </section>
+            </form> 
+        </aside>
     </aside>
     <!--************************************************************************************-->
     <aside contenteditable="false">
-        <main id="registro" class="modal2">
-            <form action="index.html"class="modal2-content animate">
+        <aside id="registro" class="modal2">
+            <form action="index.html" class="modal2-content animate">
                 <section id="seccion2">
                     <fieldset>  
                         <legend>TUS DATOS</legend>  
@@ -85,9 +85,9 @@
                             <p>Introduce tus datos</p>
                             <p><label for="nombre">Nombre: </label><input type="text" id="nombre" name="nombre" required></p>
                             <p><label>Apellidos: <input type="text" id="apellidos" name="apellidos" required></label></p>
-                            <p><label for="pass">Contraseña: </label><input type="password" pattern="[a-zA-Z0-9._-]{4,20}" id="pass" name="pass" required></p>
+                            <p><label for="pass_reg">Contraseña: </label><input type="password" pattern="[a-zA-Z0-9._-]{4,20}" id="pass_reg" name="pass_reg" required></p>
                             <p><label for="pass2"> Repite contraseña: </label><input type="password" pattern="[a-zA-Z0-9._-]{4,20}" id="pass2" name="pass2" required></p>
-                            <p><label for="email">Email: </label><input type="email" id="email" name="email" required></p>
+                            <p><label for="email_reg">Email: </label><input type="email" id="email_reg" name="email_reg" required></p>
                             <p>Sexo:</p>
                                 <input type="radio" id="masculino" name="sexo" value="H"> 
                                 <label for="masculino">H</label>
@@ -123,11 +123,11 @@
                             <input type="file" accept="image/jpg, image/png, image/gif, image/jpeg" id="input-image">
                     </fieldset>     
                 </section>
-                <section id="log">
+                <aside id="log">
                     <input type="submit" value="Registrarse">
-                </section>   
+                </aside>   
             </form> 
-        </main>
+        </aside>
     </aside>
     <!--************************************************************************************-->
     <footer>
