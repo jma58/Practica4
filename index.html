@@ -7,15 +7,24 @@
     <link rel="stylesheet" href="estilo.css">
     <link rel="stylesheet" href ="fontello/css/fontello.css">
     <script src="javas.js"></script>
+    
     <title>Página Inicio-SUNEGAMI</title>
 </head>
 <body>
-    <header>
+    <header id="hdr">
         <a href="index.html"><img src="./imagenes/sunegamilogo.png" alt="logo" id="logo"></a>
-        <form>
-            <input type="search" class="busqueda">
-            <input type="submit" value="Buscar">   
+
+
+        <form class="container">
+            <input type="text" class="busqueda">
+            <button><i class="icon-search"></i></button>
+            
         </form>
+
+
+        
+
+
         <aside>
             <ul>
                 <li>
@@ -138,11 +147,11 @@
                         
                             <p>
                                 <label for="email">Email: </label>
-                                <input type="email" id="email" name="email" required>
+                                <input type="email" id="email" name="email" ><!--required-->
                             </p>
                             <p>
                                 <label for="pass">Contraseña: </label>
-                                <input type="password" pattern="[a-zA-Z0-9._-]{4,20}" id="pass" name="pass" required>
+                                <input type="password" pattern="[a-zA-Z0-9._-]{4,20}" id="pass" name="pass" ><!--required-->
                             </p>
                         
                         <button type="submit">Inicar sesión</button>
@@ -166,11 +175,11 @@
                         <legend>TUS DATOS</legend>  
                         <h3> REGISTRO </h3>
                             <p>Introduce tus datos</p>
-                            <p><label for="nombre">Nombre: </label><input type="text" id="nombre" name="nombre" required></p>
+                            <p><label for="nombre">Nombre: </label><input type="text" id="nombre" name="nombre" ></p><!--required-->
                             <p><label>Apellidos: <input type="text" id="apellidos" name="apellidos" required></label></p>
-                            <p><label for="pass_reg">Contraseña: </label><input type="password" pattern="[a-zA-Z0-9._-]{4,20}" id="pass_reg" name="pass_reg" required></p>
-                            <p><label for="pass2"> Repite contraseña: </label><input type="password" pattern="[a-zA-Z0-9._-]{4,20}" id="pass2" name="pass2" required></p>
-                            <p><label for="email_reg">Email: </label><input type="email" id="email_reg" name="email_reg" required></p>
+                            <p><label for="pass_reg">Contraseña: </label><input type="password" pattern="[a-zA-Z0-9._-]{4,20}" id="pass_reg" name="pass_reg" ></p><!--required-->
+                            <p><label for="pass2"> Repite contraseña: </label><input type="password" pattern="[a-zA-Z0-9._-]{4,20}" id="pass2" name="pass2" ></p><!--required-->
+                            <p><label for="email_reg">Email: </label><input type="email" id="email_reg" name="email_reg" required></p><!--required-->
                             <p>Sexo:</p>
                                 <input type="radio" id="masculino" name="sexo" value="H"> 
                                 <label for="masculino">H</label>
