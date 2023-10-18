@@ -5,40 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="./imagenes/sunegamilogo.png">
     <link rel="stylesheet" href="estilo.css">
-
+    <link rel="stylesheet" href ="fontello/css/fontello.css">
+    <script src="javas.js"></script>
     <title>Impresón de álbum-SUNEGAMI</title>
-    <style>
-        table, tr, th, td {
-        border: 1px solid black;
-        }
-    </style>
 </head>
 <body>
     <header>
         <a href="index.html"><img src="./imagenes/sunegamilogo.png" alt="logo"></a>
-        <h1> Impresón de álbum - SUNEGAMI</h1>  
         <form>
             <input type="search" class="busqueda">
              <input type="submit" value="Buscar">
         </form>
         <aside>
-            <ul>
-                <li><a href="login.html" class="icon-login"><span>Login</span></a></li>
-                <li><a href="registro.html" class="icon-doc-new"><span>Registro</span></a></li>
-            </ul>   
+            <figure>
+                <button class="mipanel" onclick=openNav()><img src="./imagenes/user1.jpg" alt="user" id="user"></button>
+                <figcaption>Usuario: Etzio</figcaption>
+            </figure> 
+            <aside id="panel" class="lateral">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+                <figure>
+                    <img src="./imagenes/user1.jpg" alt="usu" id="usuario">
+                    <figcaption>Usuario: Etzio</figcaption>
+                </figure>
+                <a href="index2.html">Mis datos</a>
+                <a href="index.html">Darme de baja</a>
+                <a href="index2.html">Mis álbumes</a>
+                <a href="index2.html">Crear álbum</a>
+                <a href="solicitar_album.html">Solicitar álbum</a>
+                <a href="index.html">Salir</a>
+            </aside>             
         </aside>       
     </header>
     <nav id="menu">
-            <!-- <label for="chkMenu">&equiv;</label>
-            <input type="checkbox" id="chkMenu"> -->
-            <ul>
-                <li><a href="index2.html" class="icon-home"><span>Inicio</span></a></li>
-                <li><a href="index.html" class="icon-home"><span>Cerrar sesión</span></a></li>
-                <li><a href="buscar.html" class="icon-search"><span>Buscar</span></a></li>
-                <li><a href="usuario.html" class="icon-search"><span>Mi usuario(Menú usuario registrado)</span></a></li>
-            </ul>
-        </nav>
-    <main>
+        <label for="chkMenu">&equiv;</label>
+        <input type="checkbox" id="chkMenu">
+        <ul>
+            <li><a href="index2.html" class="icon-home"><span>Inicio</span></a></li>
+            <li><a href="index.html" class="icon-home"><span>Cerrar sesión</span></a></li>
+            <li><a href="buscar.html" class="icon-search"><span>Buscar</span></a></li>
+            <li><a href="usuario.html" class="icon-search"><span>Mi usuario(Menú usuario registrado)</span></a></li>
+        </ul>
+    </nav>
+    <main id="mainalbum">
         <section id="intro">
             <h2> Solicitud de impresión de álbum </h2>
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus perferendis atque ipsum provident dolorem! Eius enim unde ea veniam eum nihil commodi quod itaque quaerat ipsum! Debitis quibusdam enim aliquid.</p>
@@ -46,7 +54,7 @@
         <section id="tarifas">
             <h2>Tarifas</h2>
             <table>
-                <caption>Tarifas</caption>
+                <!--<caption>Tarifas</caption>-->
                     <tr>
                         <th scope="col">Concepto</th>
                         <th scope="col">Tarifa</th>  
@@ -77,10 +85,10 @@
                     </tr>    
             </table>
         </section>
-        <aside>
+        <section id="formulario">
             <form action="respuesta_solicitar_album.html">
-                <section id="formulario">
-                    <h2>Formulario de soicitud</h2>
+                <h2 id="solicitud">Formulario de solicitud</h2>
+                <aside id="izq">
                     <p>
                         <label for="nombre">Nombre: </label>
                         <input type="text" id="nombre" name="nombre" maxlength="200" placeholder="Nombre" >(*) <!--required-->
@@ -114,14 +122,16 @@
                             <option value="40">Valencia</option>
                         </select>
                     
-                    <label for="provincia"> </label>
-                        <select id="provincia" name="provincia">
-                            <option value="" disabled selected hidden>Provincia</option>
-                            <option value="1">Valencia</option>
-                            <option value="33">murcia</option>
-                            <option value="40">Andalucia</option>
-                        </select>(*)
-                    </p>
+                        <label for="provincia"> </label>
+                            <select id="provincia" name="provincia">
+                                <option value="" disabled selected hidden>Provincia</option>
+                                <option value="1">Valencia</option>
+                                <option value="33">murcia</option>
+                                <option value="40">Andalucia</option>
+                            </select>(*)
+                        </p>
+                </aside>
+                <aside id="der">
                     <p>
                         <label for="telefono">Telefono: </label>
                         <input type="tel" id="telefono" name="telefono" placeholder="### ## ## ##" >
@@ -138,7 +148,7 @@
                         <label for="res">Resolución de impresión: </label>
                         <input type="range" id="res" name="res" min="150" max="900" step="150" value="150" onchange="document.getElementById('outres').value=value" list="tickmarks">
                         <output id="outres" name="outres" for="res">150</output>
-
+    
                         <datalist id = "tickmarks">
                             <option value="150"></option>
                             <option value="300"></option>
@@ -147,10 +157,7 @@
                             <option value="750"></option>
                             <option value="900"></option>
                         </datalist>
-
-
-                    </p>
-                      
+                    </p>  
                     <p>
                         <label for="album">Album de SUNEGAMI: </label>
                         <select id="album" name="album">
@@ -169,17 +176,21 @@
                         <label for="impresion">Impresión a color?: </label>
                         <input type="checkbox" id="impresion" name="impresion">
                     </p>    
-                    <input type="submit" value="Enviar !">
-                </section>
-            </form>
-        </aside>
+                    <input type="submit" value="Enviar !">        
+                </aside>
+            </form>  
+        </section>
     </main>
     <footer>
         <p>&copy;
             <time datetime ="2023-09-25"> José Ángel Mercadillo & Octavio Gregorio </time>
-            <abbr title = "DAW"> Practica 3 </abbr>
+            <abbr title = "DAW"> Practica 4 </abbr>
         </p>
     </footer>
+    <script>
+        login();
+        registro();
+    </script>
 </body>
 
 </html>

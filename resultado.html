@@ -3,25 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
     <link rel="icon" href="./imagenes/sunegamilogo.png">
     <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href ="fontello/css/fontello.css">
     <title>Resultados de Búsqueda - SUNEGAMI</title>
 </head>
 <body>
     <header>
         <a href="index.html"><img src="./imagenes/sunegamilogo.png" alt="logo"></a>
-        <h1>Resultados de Búsqueda - SUNEGAMI</h1>
         <form action="buscar.html">
             <input type="search" class="busqueda">
             <input type="submit" value="Buscar">
         </form>
-        <ul>
-            <li><a href="login.html" class="icon-login"><span>Login</span></a></li>
-            <li><a href="registro.html" class="icon-doc-new"><span>Registro</span></a></li>
-        </ul>
+        <aside>
+            <figure>
+                <img src="./imagenes/user1.jpg" alt="usu" id="usuario">
+                <figcaption>Usuario: Etzio</figcaption>
+            </figure> 
+        </aside>  
     </header>
-    <nav>
+    <nav id="menu">
         <ul>
             <li><a href="index.html">Inicio</a></li>
             <li><a href="buscar.html">Buscar</a></li>
@@ -32,8 +33,7 @@
         <section id="resultados-busqueda">
             <h2>Resultados de la búsqueda</h2>
             <ul>
-                <li>
-                    
+                <li>    
                     <a href="detalle.html"><img src="./imagenes/muradin.jpg" alt="Foto 1"></a>
                     <h3>Título de la Foto 1</h3>
                     <p>Fecha: 2023-09-26</p>
@@ -42,7 +42,7 @@
                 </li>
                 <!-- Repetir estructura similar para otros resultados de búsqueda -->
                 <li>
-                    <a href="mensaje_error.html"><img src="./imagenes/unnamed.jpg" alt="Foto 2"></a>
+                    <a href="mensaje_error.html"><img src="./imagenes/intro.jpg" alt="Foto 2"></a>
                     <h3>Título de la Foto 2</h3>
                     <p>Fecha: 2023-09-25</p>
                     <p>País: País 2</p>
@@ -54,7 +54,7 @@
     <footer>
         <p>&copy;
             <time datetime ="2023-09-25"> José Ángel Mercadillo & Octavio Gregorio </time>
-            <abbr title = "DAW"> Practica 3 </abbr>
+            <abbr title = "DAW"> Practica 4 </abbr>
         </p>
     </footer>
 </body>
