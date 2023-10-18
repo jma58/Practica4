@@ -1,3 +1,7 @@
+import { ShaderArt } from 'https://cdn.skypack.dev/shader-art';
+
+ShaderArt.register();
+
 
 function scroll(){
   var myIndex = 0;
