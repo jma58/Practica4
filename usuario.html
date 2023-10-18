@@ -6,15 +6,21 @@
     <link rel="icon" href="./imagenes/sunegamilogo.png">
     <link rel="stylesheet" href="estilo.css">
     <link rel="stylesheet" href ="fontello/css/fontello.css">
+    <script src="javas.js"></script>
+
     <title>Página de usuario registardo-SUNEGAMI</title>
 </head>
 <body>
     <header>
         <a href="index2.html"><img src="./imagenes/sunegamilogo.png" alt="logo"></a>
-        <form>
-            <input type="search" class="busqueda">
-             <input type="submit" value="Buscar">
+
+        <form class="container">
+            
+            <button id="jello-horizontal"><i class="icon-search"></i></button>
+            <input type="text" class="busqueda">
+            
         </form>
+        
         <aside>
             <figure>
                 <img src="./imagenes/user1.jpg" alt="usu" id="usuario">
@@ -25,12 +31,16 @@
     <nav id="menu">
         <label for="chkMenu">&equiv;</label>
         <input type="checkbox" id="chkMenu">
-        <li><a href="index2.html" class="icon-home"><span>Inicio</span></a></li>
-        <li><a href="index.html" class="icon-home"><span>Cerrar sesión</span></a></li>
-        <li><a href="buscar.html" class="icon-search"><span>Buscar</span></a></li>
+
+        <ul>
+            <li><a href="index2.html" class="icon-home"><span>Inicio</span></a></li>
+            <li><a href="index.html" class="icon-home"><span>Cerrar sesión</span></a></li>
+            <li><a href="buscar.html" class="icon-search"><span>Buscar</span></a></li>
+        </ul>
+        
         
     </nav>
-    <main>
+    <main id="usr">
         <h2>Bienvenido, [Etzio]</h2>
         <p>Seleccione una función:</p>
         <ul>
