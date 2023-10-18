@@ -446,8 +446,8 @@ body>header>aside>ul{
         top: 0;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Opcional: agrega sombra */
         display: grid;
-        grid-template-areas: "a form form aside"; 
-        grid-template-columns: 4em auto auto 11em ;
+        grid-template-areas: "a form aside"; 
+        grid-template-columns: 4em auto 11em ;
         grid-template-rows: 4em ;
     }
    
@@ -458,25 +458,40 @@ body>header>aside>ul{
         object-position: center;
         align-self: center;
     }
-    body>header>form{
+    /* body>header>form{
         grid-area: form;
         object-fit: cover;
         object-position: center;
         align-self: center;
-    }
-
-    .container{
-        position: relative;
+    } */
+    body>header>form {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end; /* Esto alineará los elementos al final del contenedor (derecha) */
     }
     
-    .busqueda{
-        width: 90%;
+
+    body>header>form .search-container {
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+    
+    body>header>form input.busqueda{
+        width: 100%;
         padding: 10px;
         border-radius: 5px 0 0 5px ;
         padding-right: 35px;
         border-radius: 5px;
-        
         outline: none;
+    }
+    
+    body>header>form button {
+        background-color: crimson;
+        padding: 10px 15px;
+        border-radius: 5px;
+        color: white;
+        cursor: pointer;
     }
     body>header>form>button{
         background-color: crimson;
@@ -489,7 +504,6 @@ body>header>aside>ul{
         border-radius: 0 5px 5px 0;
         color: white;
         cursor: pinter;
-        
         
     }
 
