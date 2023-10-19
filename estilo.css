@@ -1,3 +1,69 @@
+ /* BOTON SLIDER */
+ #darkbot{
+    display:flex;
+    justify-content: space-around;
+ }
+ .switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #2196F3;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  } 
 /*Animacion*/
 @keyframes transitionIn{
 
@@ -35,18 +101,22 @@ main{
 
 }
 body{
-    
     min-height: 100vh;
     min-width: 400px;  
-    background: linear-gradient(rgb(45, 162, 10), #0b0b0a);
+    /*background: linear-gradient(rgb(45, 162, 10), #0b0b0a);*/
     display:grid;
     grid-template-rows: auto auto 1fr auto;
     margin:0%;
-    color:#dac8c8;
+    color:#020000;
     align-items: end;
-
     animation: transitionIn 1s;
 }
+
+.dark-mode {
+    background-color: black;
+    color: white;
+  }
+
 
 #botbus{
     display: flex;
@@ -229,7 +299,7 @@ aside>ul>li>a:hover{
 }
 
 .modal-content {
-    background:linear-gradient(rgb(45, 162, 10), #0b0b0a);;
+    background:linear-gradient(rgb(243, 244, 243), #535353);;
     margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
     border: 10px solid gray;
     width:250px; /* Could be more or less, depending on screen size */
@@ -255,7 +325,7 @@ aside>ul>li>a:hover{
 }
 
 .modal2-content {
-    background:linear-gradient(rgb(45, 162, 10), #0b0b0a);;
+    background:linear-gradient(rgb(252, 252, 252), #535353);;
     margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
     border: 10px solid gray;
     width: min-content; /* Could be more or less, depending on screen size */
@@ -334,7 +404,6 @@ aside>ul>li>a:hover{
   }
 /*FORMULARIO ALBUMNES*/
 #mainalbum{
-    padding:.5em;
     display: grid;
     grid-template-areas: "intro intro" "tarifas formulario";
 }
@@ -431,7 +500,7 @@ body>footer>p{
     display:flex;
     flex-direction: row;
     justify-content: center;
-    color: white;
+    color: grey;
 }
 
 #menu>ul>li>a{

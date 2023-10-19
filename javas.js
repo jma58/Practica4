@@ -1,5 +1,3 @@
-
-
 function scroll(){
   var myIndex = 0;
   carousel();
@@ -40,13 +38,18 @@ function registro(){
 }
 
 
-  function openNav() {
-    document.getElementById("panel").style.width = "250px";
-  }
+function openNav() {
+  document.getElementById("panel").style.width = "250px";
+}
   
-  function closeNav() {
-    document.getElementById("panel").style.width = "0";
-  }
+function closeNav() {
+  document.getElementById("panel").style.width = "0";
+}
+
+function oscuro() {
+  var element = document.body;
+  element.classList.toggle("dark-mode");
+}
   
 
 
