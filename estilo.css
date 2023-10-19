@@ -521,7 +521,8 @@ input{
 
 /*MEDIAQUERIES*/
 
-@media ( min-width: 400px){
+@media ( min-width: 666px){
+
     #menu>ul>li{
         display:inline-block;
         padding: .4em;
@@ -602,6 +603,7 @@ input{
         object-position: center;
         align-self: center;
     }
+
 }
 
 @media ( min-width: 540px){
@@ -614,6 +616,28 @@ input{
    
 
 }
-@media (min-width: 700px){  
-    
+
+@media (max-width: 666px) {
+
+    #mainalbum{
+       display: block;
+    }
+
+    #user{
+        max-height: 100px;
+
+    }
+    .imagenes{
+        min-width: 301px;
+    }
+
+
+    body>header>a>img{
+        max-height: 170px;
+
+    }
+
+    main {
+        max-width: 666px;
+    }
 }
