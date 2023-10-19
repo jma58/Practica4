@@ -12,14 +12,13 @@
 <body>
     <header>
         <a href="index.html"><img src="./imagenes/sunegamilogo.png" alt="logo"></a>
-        <form>
-            <input type="search" class="busqueda">
-             <input type="submit" value="Buscar">
+        <form id="botbus">
+            <button type="submit" class="icon-search"></button> 
+            <input type="search" class="busqueda"> 
         </form>
         <aside>
             <figure>
                 <button class="mipanel" onclick=openNav()><img src="./imagenes/user1.jpg" alt="user" id="user"></button>
-                <figcaption>Usuario: Etzio</figcaption>
             </figure> 
             <aside id="panel" class="lateral">
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
@@ -27,32 +26,31 @@
                     <img src="./imagenes/user1.jpg" alt="usu" id="usuario">
                     <figcaption>Usuario: Etzio</figcaption>
                 </figure>
-                <a href="index2.html">Mis datos</a>
-                <a href="index.html">Darme de baja</a>
-                <a href="index2.html">Mis álbumes</a>
-                <a href="index2.html">Crear álbum</a>
-                <a href="solicitar_album.html">Solicitar álbum</a>
-                <a href="index.html">Salir</a>
+                    <a href="index2.html" class="icon-doc-new">Mis datos</a>
+                    <a href="index.html" class="icon-trash-empty">Darme de baja</a>
+                    <a href="index2.html" class="icon-search">Mis álbumes</a>
+                    <a href="index2.html" class="icon-doc-new">Crear álbum</a>
+                    <a href="solicitar_album.html" class="icon-search">Solicitar álbum</a>
+                    <a href="index.html" class="icon-logout">Cerrar sesión</a>     
             </aside>             
-        </aside>       
+        </aside> 
+        <nav id="menu">
+            <label for="chkMenu">&equiv;</label>
+            <input type="checkbox" id="chkMenu">
+            <ul>
+                <li><a href="index2.html" class="icon-home"><span>Inicio</span></a></li>
+                <li><a href="buscar.html" class="icon-search"><span>Buscar</span></a></li>
+                <li><a href="index.html" class="icon-logout"><span>Cerrar sesión</span></a></li>
+            </ul>
+        </nav>      
     </header>
-    <nav id="menu">
-        <label for="chkMenu">&equiv;</label>
-        <input type="checkbox" id="chkMenu">
-        <ul>
-            <li><a href="index2.html" class="icon-home"><span>Inicio</span></a></li>
-            <li><a href="index.html" class="icon-home"><span>Cerrar sesión</span></a></li>
-            <li><a href="buscar.html" class="icon-search"><span>Buscar</span></a></li>
-            <li><a href="usuario.html" class="icon-search"><span>Mi usuario(Menú usuario registrado)</span></a></li>
-        </ul>
-    </nav>
     <main id="mainalbum">
         <section id="intro">
             <h2> Solicitud de impresión de álbum </h2>
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus perferendis atque ipsum provident dolorem! Eius enim unde ea veniam eum nihil commodi quod itaque quaerat ipsum! Debitis quibusdam enim aliquid.</p>
         </section>
-        <section id="tarifas">
-            <h2>Tarifas</h2>
+        <fieldset id="tarifas">
+            <legend>Tarifas</legend>
             <table>
                 <!--<caption>Tarifas</caption>-->
                     <tr>
@@ -84,18 +82,19 @@
                         <td>0.02 € por foto</td>
                     </tr>    
             </table>
-        </section>
-        <section id="formulario">
+        </fieldset>
+        <fieldset id="formulario">
+            <legend>Formulario de solicitud</legend>
             <form action="respuesta_solicitar_album.html">
-                <h2 id="solicitud">Formulario de solicitud</h2>
+               
                 <aside id="izq">
                     <p>
                         <label for="nombre">Nombre: </label>
-                        <input type="text" id="nombre" name="nombre" maxlength="200" placeholder="Nombre" >(*)<!--required-->
+                        <input type="text" id="nombre" name="nombre" maxlength="200" placeholder="Nombre" >(*)
                     </p>
                     <p>
                         <label for="titulo">Titulo del album: </label>
-                        <input type="text" id="titulo" name="titulo" maxlength="200" placeholder="Cubierta" >(*)<!--required-->
+                        <input type="text" id="titulo" name="titulo" maxlength="200" placeholder="Cubierta" >(*)
                     </p>
                     <p>
                         <label for="texto_ad">Texto adicional: </label>
@@ -103,17 +102,17 @@
                     </p> 
                     <p>
                         <label for="correo">Correo electrónico: </label>
-                        <input type="email" id="correo" name="correo" maxlength="200" placeholder="email@email" ><!--required-->
+                        <input type="email" id="correo" name="correo" maxlength="200" placeholder="email@email" >
                     </p>
                     <p>
                         <label for="direccion">Dirección: </label>
-                        <input type="text" id="direccion" name="direccion" placeholder="Calle" ><!--required-->
+                        <input type="text" id="direccion" name="direccion" placeholder="Calle" >
                     
                         <label for="numero">Numero: </label> 
-                        <input type="text" id="numero" name="numero" placeholder="Número" size="3" ><!--required-->
+                        <input type="text" id="numero" name="numero" placeholder="Número" size="3" >
                     
                         <label for="cp">CP: </label>
-                        <input type="text" id="cp" name="cp" maxlength="5" placeholder="CP" size="6" ><!--required-->
+                        <input type="text" id="cp" name="cp" maxlength="5" placeholder="CP" size="6" >
                     
                         <select id="ciudad" name="ciudad">
                             <option value="" disabled selected hidden>Localidad</option>
@@ -179,7 +178,7 @@
                     <input type="submit" value="Enviar !">        
                 </aside>
             </form>  
-        </section>
+        </fieldset>
     </main>
     <footer>
         <p>&copy;
@@ -192,5 +191,4 @@
         registro();
     </script>
 </body>
-
 </html>

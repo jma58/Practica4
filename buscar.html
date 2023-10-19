@@ -12,9 +12,9 @@
 <body>
     <header>
         <a href="index.html"><img src="./imagenes/sunegamilogo.png" alt="logo"></a>
-        <form>
+        <form id="botbus">
+            <button type="submit" class="icon-search"></button> 
             <input type="search" class="busqueda">
-            <input type="submit" value="Buscar">
         </form>
         <aside>
             <ul>
@@ -25,16 +25,16 @@
                     <button onclick="document.getElementById('registro').style.display='block'" class="icon-doc-new">Registro</button>
                 </li>
             </ul>
-        </aside>   
+        </aside>
+        <nav id="menu">
+            <label for="chkMenu">&equiv;</label>
+            <input type="checkbox" id="chkMenu">
+            <ul>
+                <li><a href="index.html" class="icon-home"><span>Inicio</span></a></li>
+                <li><a href="buscar.html" class="icon-search"><span>Buscar</span></a></li>
+            </ul>
+        </nav>   
     </header>
-    <nav id="menu">
-        <label for="chkMenu">&equiv;</label>
-        <input type="checkbox" id="chkMenu">
-        <ul>
-            <li><a href="index.html" class="icon-home"><span>Inicio</span></a></li>
-            <li><a href="buscar.html" class="icon-search"><span>Buscar</span></a></li>
-        </ul>
-    </nav>
     <main id="formulario-busqueda">
         <fieldset>
             <legend>Realizar una búsqueda de fotos</legend>
@@ -113,8 +113,8 @@
                                 <label for="masculino">H</label>
                                 <input type="radio" id="femenino"  name="sexo" value="M"> 
                                 <label for="femenino">M</label>
-                            <p><label for="fec">Fecha de nacimiento:</label>
-                            <input type="date" id="fec" name="fec"></p>
+                            <p><label for="fecha1">Fecha de nacimiento:</label>
+                            <input type="date" id="fecha1" name="fecha1"></p>
                             <p><label for="ciudad">Ciudad: </label>
                                 <select id="ciudad" name="ciudad">
                                     <option value="1">Alicante</option>
@@ -122,8 +122,8 @@
                                     <option value="40">Valencia</option>
                                 </select>
                             </p>
-                            <p><label for="country">País: </label>
-                                <select id="country" name="country">
+                            <p><label for="pais">País: </label>
+                                <select id="pais" name="pais">
                                     <option value="1">Alemania</option>
                                     <option value="33">España</option>
                                     <option value="40">Francia</option>

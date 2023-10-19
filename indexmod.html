@@ -7,14 +7,14 @@
     <link rel="stylesheet" href="estilo.css">
     <link rel="stylesheet" href ="fontello/css/fontello.css">
     <script src="javas.js"></script>
-    <title>Detalle de Foto-SUNEGAMI</title>
+    <title>Página Inicio-SUNEGAMI</title>
 </head>
 <body>
-    <header>  
-        <a href="index.html"><img src="./imagenes/sunegamilogo.png" alt="logo"></a>
-        <form id="botbus">
-            <button type="submit" class="icon-search"></button>
+    <header>
+        <a href="index.html"><img src="./imagenes/sunegamilogo.png" alt="logo" id="logo"></a>
+        <form>
             <input type="search" class="busqueda">
+            <input type="submit" value="Buscar">   
         </form>
         <aside>
             <ul>
@@ -25,29 +25,101 @@
                     <button onclick="document.getElementById('registro').style.display='block'" class="icon-doc-new">Registro</button>
                 </li>
             </ul> 
-        </aside>
-        <nav id="menu"> 
-            <label for="chkMenu">&equiv;</label>
-            <input type="checkbox" id="chkMenu">
-            <ul>
-                <li><a href="index.html" class="icon-home"><span>Inicio</span></a></li>
-                <li><a href="buscar.html" class="icon-search"><span>Buscar</span></a></li>
-            </ul>
-        </nav>
+        </aside>        
     </header>
+    <nav id="menu">
+        <label for="chkMenu">&equiv;</label>
+        <input type="checkbox" id="chkMenu">
+        <ul>
+            <li><a href="index.html" class="icon-home"><span>Inicio</span></a></li>
+            <li><a href="buscar.html" class="icon-search"><span>Buscar</span></a></li>
+        </ul>
+    </nav>   
     <main>
-        <section id="detalle-foto">
-            <h2>Detalle de la Foto</h2>
-            <figure>
-                <img src="./imagenes/intro.jpg" alt="Foto Seleccionada">
-                <figcaption>Título de la Foto Seleccionada</figcaption>
-            </figure>
+        <section id="principal">
+            <h3> FOTO PRINCIPAL </h3>
+            <article>
+                <h4 title="No registrado">Esta foto es un ejemplo de usuario no registrado</h4>               
+                <a href="mensaje_error.html">
+                    <img src="./imagenes/intro.jpg" alt="imagen" class="imagenes ">
+                    <img src="./imagenes/muradin.jpg" alt="imagen" class="imagenes ">
+                    <img src="./imagenes/horda.jpg" alt="imagen" class="imagenes ">
+                    <img src="./imagenes/taj.jpeg" alt="imagen" class="imagenes ">
+                    <img src="./imagenes/untitled.png" alt="imagen" class="imagenes">
+                    <img src="./imagenes/images.jpg" alt="imagen" class="imagenes">
+                </a>
+                <footer>
+                    <div>
+                        <p class="icon-globe">País</p>
+                        <p class="icon-calendar">Fecha: 2023-09-25</p>
+                    </div>  
+                </footer>
+            </article>
+        </section>
+        <section id="secundaria">
+            <h3> FOTOS secundarias </h3>
             <aside>
-                <p class="icon-calendar">Fecha: 2023-09-26</p>
-                <p class="icon-globe">País: País de la Foto</p>
-                <p>Álbum de Fotos: Álbum de la Foto</p>
-                <p class="icon-user-circle-o">Usuario: Nombre de Usuario</p>
-            </aside>    
+                <figure>
+                    <h4 title="Foto 2">Foto 2</h4>
+                    <a href="mensaje_error.html"><img src="./imagenes/intro.jpg" alt="imagen"></a>
+                    <footer>
+                        <div>
+                            <p class="icon-globe">País</p>
+                            <p class="icon-calendar">Fecha: 2023-09-25</p>
+                        </div> 
+                    </footer>
+                </figure>
+                <figure>
+                    <h4 title="Foto 3">Foto 3</h4>
+                    <a href="mensaje_error.html"><img src="./imagenes/muradin.jpg" alt="imagen"></a>
+                    <footer>
+                        <div>
+                            <p class="icon-globe">País</p>
+                            <p class="icon-calendar">Fecha: 2023-09-25</p>
+                        </div> 
+                    </footer>
+                </figure>
+                <figure>
+                    <h4 title="Foto 4">Foto 4</h4>
+                    <a href="mensaje_error.html"><img src="./imagenes/horda.jpg" alt="imagen"></a>
+                    <footer>
+                        <div>
+                            <p class="icon-globe">País</p>
+                            <p class="icon-calendar">Fecha: 2023-09-25</p>
+                        </div> 
+                    </footer>
+                </figure>
+                <figure>
+                    <h4 title="Foto 2">Foto 2</h4>
+                    <a href="mensaje_error.html"><img src="./imagenes/taj.jpeg" alt="imagen"></a>
+                    <footer>
+                        <div>
+                            <p class="icon-globe">País</p>
+                            <p class="icon-calendar">Fecha: 2023-09-25</p>
+                        </div> 
+                    </footer>
+                </figure>
+                <figure>
+                    <h4 title="Foto 2">Foto 2</h4>
+                    <a href="mensaje_error.html"><img src="./imagenes/untitled.png" alt="imagen"></a>
+                    <footer>
+                        <div>
+                            <p class="icon-globe">País</p>
+                            <p class="icon-calendar">Fecha: 2023-09-25</p>
+                        </div> 
+                    </footer>
+                </figure>
+                <figure>
+                    <h4 title="Foto 2">Foto 2</h4>
+                    <a href="mensaje_error.html"><img src="./imagenes/images.jpg" alt="imagen"></a>
+                    <footer>
+                        <div>
+                            <p class="icon-globe">País</p>
+                            <p class="icon-calendar">Fecha: 2023-09-25</p>
+                        </div> 
+                    </footer>
+                </figure>
+            </aside>
         </section>
     </main>
     <!--************************************************************************************-->
@@ -146,10 +218,11 @@
             <time datetime ="2023-09-25"> José Ángel Mercadillo & Octavio Gregorio </time>
             <abbr title = "DAW"> Practica 4 </abbr>
         </p>
-    </footer>
+    </footer> 
     <script>
+        scroll();
         login();
         registro();
-    </script> 
+    </script>
 </body>
 </html>
